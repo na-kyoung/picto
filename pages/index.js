@@ -1,7 +1,6 @@
 // our-domain.com/
 
 import useImageStore from "@/lib/store/useImageStore";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
