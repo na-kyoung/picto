@@ -1,5 +1,6 @@
 // our-domain.com/
 
+import Loading from "@/components/Loading";
 import useImageStore from "@/lib/store/useImageStore";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -7,20 +8,29 @@ import { useState } from "react";
 export default function Home() {
   const router = useRouter();
   // const [selectedImg, setSelectedImg] = useState();
+  const [uploading, setUploading] = useState(false); // 업로드중일 떄 로딩중 표시
   const setImageFile = useImageStore((state) => state.setImageFile);
   
   // 이미지 업로드 & 화면 이동
   const handleFileChange = (e) => {
+    setUploading(true);
+    
     const file = e.target.files[0];
     console.log(file);
+    
+    // setTimeout(()=>{
+    //   console.log('타이머 실행 중 ...');
+    // }, 5000);
     
     if(file){
       // 파일 형식 검증
       const typeList = ['image/jpg','image/jpeg','image/png'];
       const fileType = file.type;
+      // const fileType = 'image/jpg';
       
       if(typeList.indexOf(fileType) == -1){
         alert('지원하지 않는 파일 형식입니다.');
+        setUploading(false);
         return;
       }
       // if (!fileType.includes('image')) {
@@ -60,6 +70,7 @@ export default function Home() {
         <input onChange={handleFileChange} id="select_img" type="file" accept="image/*" capture="camera" style={{ display:"none" }} />
       </div>
       {/* {selectedImg && <Image src={selectedImg.toString()} width="500" height="auto" alt="..." />} */}
+      {uploading && <Loading />}
     </div>
   );
 }
