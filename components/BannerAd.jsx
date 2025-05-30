@@ -1,3 +1,5 @@
+// Component for Adsense Banner
+
 'use client';
 
 import { useEffect } from 'react';

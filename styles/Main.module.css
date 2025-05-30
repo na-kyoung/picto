@@ -1,0 +1,32 @@
+.mainbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.maintitle{
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.inputbtn {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #c9c9c9;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.imginput {
+  display: none;
+}
+
+.spinnerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

@@ -1,3 +1,5 @@
+// Component for Loading Spinner
+
 import classes from '@/styles/Loading.module.css';
 
 export default function Loading() {
