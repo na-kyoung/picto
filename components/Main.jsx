@@ -8,12 +8,12 @@ import classes from "@/styles/Main.module.css";
 
 export default function Main() {
   const router = useRouter();
-  const [uploading, setUploading] = useState(false); // 업로드중일 떄 로딩중 표시
+  // const [uploading, setUploading] = useState(false); // 업로드중일 떄 로딩중 표시
   const setImageFile = useImageStore((state) => state.setImageFile); // 이미지 저장
   
   // 이미지 업로드 & 화면 이동
   const handleFileChange = (e) => {
-    setUploading(true);
+    // setUploading(true);
     
     const file = e.target.files[0];
     console.log(file);
@@ -30,7 +30,7 @@ export default function Main() {
       
       if(typeList.indexOf(fileType) == -1){
         alert('지원하지 않는 파일 형식입니다.');
-        setUploading(false);
+        // setUploading(false);
         return;
       }
 
@@ -47,9 +47,11 @@ export default function Main() {
         <label htmlFor="select_img" className={classes.inputbtn}>사진 편집</label>
         <input onChange={handleFileChange} id="select_img" type="file" accept="image/*" capture="camera" className={classes.imginput} />
       </div>
-      <div className={classes.spinnerbox}>
-        {uploading && <Loading />}
-      </div>
+      {/* {uploading && (
+        <div className={classes.spinnerbox}>
+          <Loading />
+        </div>
+      )} */}
     </div>
   );
 }
