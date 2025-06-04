@@ -1,13 +1,13 @@
-.editbox {
+.edit_box {
   text-align: center;
 }
 
-.edittitle {
+.edit_title {
   padding: 30px;
   font-size: 30px;
   font-weight: bold;
 }
 
-.editimg {
+.edit_img {
   width: 100%;
 }

@@ -1,0 +1,36 @@
+.editbar_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 60px;
+  background-color: #111;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.menu_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 45px;
+  height: 60px;
+
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px 0;
+}
+
+.title {
+  color: #fff;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
