@@ -1,14 +1,9 @@
-.editbar_box {
+.submenu_box {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  
-  width: 100%;
+  width: 300px;
   height: 60px;
-  /* background-color: #111; */
-
-  position: absolute;
-  bottom: 0;
 }
 
 .menu_box {
@@ -33,7 +28,8 @@
   color: #fff;
   font-size: 10px;
   margin-bottom: 3px;
-  white-space: nowrap;
+  white-space: nowrap; /* 줄바꿈 X */
+  user-select: none; /* 글선택 X */
 }
 
 .back_btn {

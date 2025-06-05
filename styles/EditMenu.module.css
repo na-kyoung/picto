@@ -11,6 +11,14 @@
   bottom: 0;
 }
 
+.menubar_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+}
+
 .menu_box {
   display: flex;
   align-items: center;
@@ -33,5 +41,6 @@
   color: #fff;
   font-size: 10px;
   margin-bottom: 3px;
-  white-space: nowrap;
+  white-space: nowrap; /* 줄바꿈 X */
+  user-select: none; /* 글선택 X */
 }
